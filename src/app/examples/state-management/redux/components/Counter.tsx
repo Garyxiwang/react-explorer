@@ -24,7 +24,7 @@ export default function Counter() {
       <div className="flex items-center space-x-4 mb-6">
         <button
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          onClick={() => dispatch(decrement())}
+          onClick={() => dispatch(decrement(1))}
         >
           -
         </button>
@@ -33,7 +33,7 @@ export default function Counter() {
 
         <button
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          onClick={() => dispatch(increment())}
+          onClick={() => dispatch(increment(1))}
         >
           +
         </button>
