@@ -76,6 +76,60 @@ export default function ReduxPage() {
             <p className="text-green-700 dark:text-green-300 mt-2 text-sm italic">
               不再建议手写传统的 Redux 代码，因为它需要编写大量重复的样板代码，容易出错且难以维护。
             </p>
+            
+            <div className="mt-4 pt-4 border-t border-green-200 dark:border-green-800">
+              <h3 className="text-lg font-medium text-green-800 dark:text-green-300 mb-2">
+                Hooks API 替代 connect
+              </h3>
+              <p className="text-green-700 dark:text-green-300 mb-2">
+                现代 Redux 应用不再推荐使用传统的 <code className="bg-green-100 dark:bg-green-800 px-1 py-0.5 rounded">connect</code> 高阶组件方式连接组件和 Redux store，而是推荐使用 React-Redux 提供的 Hooks API：
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+                <div className="bg-green-100 dark:bg-green-800/40 p-3 rounded-md">
+                  <h4 className="font-medium mb-1 text-green-800 dark:text-green-300">✅ 推荐使用 Hooks</h4>
+                  <pre className="text-xs font-mono whitespace-pre-wrap text-green-700 dark:text-green-300">
+{`// 使用 hooks
+function Counter() {
+  const count = useSelector(
+    (state) => state.counter.value
+  );
+  const dispatch = useDispatch();
+  
+  return (
+    <button onClick={() => 
+      dispatch(increment())
+    }>
+      Count: {count}
+    </button>
+  );
+}`}
+                  </pre>
+                </div>
+                <div className="bg-red-100 dark:bg-red-800/40 p-3 rounded-md">
+                  <h4 className="font-medium mb-1 text-red-800 dark:text-red-300">❌ 不再推荐 connect</h4>
+                  <pre className="text-xs font-mono whitespace-pre-wrap text-red-700 dark:text-red-300">
+{`// 传统 connect 方式
+function Counter({ count, increment }) {
+  return (
+    <button onClick={increment}>
+      Count: {count}
+    </button>
+  );
+}
+
+export default connect(
+  (state) => ({
+    count: state.counter.value
+  }),
+  { increment }
+)(Counter);`}
+                  </pre>
+                </div>
+              </div>
+              <p className="text-green-700 dark:text-green-300 text-sm">
+                Hooks API 更简洁、更符合函数组件的写法，减少了样板代码，提高了代码可读性和可维护性。
+              </p>
+            </div>
           </div>
         </div>
 
