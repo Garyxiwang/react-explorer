@@ -40,7 +40,7 @@ export default function Home() {
       </main>
 
       <footer className="mt-16 text-center text-gray-500 text-sm">
-        <p>React 技术演示项目 - 用于学习和参考,项目地址: <a href="https://github.com/zhaoyuxiang/react-demo" target="_blank" rel="noopener noreferrer">https://github.com/zhaoyuxiang/react-demo</a></p>
+        <p>React 技术演示项目 - 用于学习和参考,项目地址: <a href="https://github.com/Garyxiwang/react-explorer" target="_blank" rel="noopener noreferrer">https://github.com/Garyxiwang/react-explorer</a></p>
       </footer>
     </div>
   );
