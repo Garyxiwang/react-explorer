@@ -1,0 +1,7 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/examples/hooks/page": "app/examples/hooks/page.js",
+  "/examples/context/page": "app/examples/context/page.js",
+  "/examples/state-management/page": "app/examples/state-management/page.js"
+}
